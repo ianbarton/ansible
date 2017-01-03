@@ -1,0 +1,10 @@
+- hosts: archlinux-remote
+  remote_user: ian
+  become: true
+  tasks:
+  - name: Update 'pacman' cache
+    pacman:
+      update_cache: true
+  - name: Update Arch Linux via 'pacman'
+    pacman:
+      upgrade: yes
